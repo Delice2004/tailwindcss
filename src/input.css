@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  @keyframes wordCycle {
+    0%, 20% {
+      content: "Agency";
+      opacity: 1;
+    }
+    25%, 45% {
+      content: "Business";
+      opacity: 1;
+    }
+    50%, 70% {
+      content: "Startup";
+      opacity: 1;
+    }
+    75%, 100% {
+      content: "SaaS";
+      opacity: 1;
+    }
+  }
+
+  .animate-words::after {
+    content: "Agency";
+    display: inline-block;
+    animation: wordCycle 8s infinite;
+    transition: opacity 0.5s ease-in-out;
+  }
+}
